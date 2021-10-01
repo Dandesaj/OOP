@@ -7,7 +7,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 				
-		Auto instanciaAuto = new Auto();
+		Auto instanciaAuto = new Auto("marca","modelo","color",0,20,true);
 		
 		//using getter and setter method
 		System.out.println("valor marca = "+ instanciaAuto.getMarca());

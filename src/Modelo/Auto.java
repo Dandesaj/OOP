@@ -3,31 +3,22 @@ import Modelo.SistemaSonido;
 
 public class Auto extends Vehiculo{
 	
-	private String marca;
-	private String modelo;
-	private String color;
+	
 	private int velocidadActual;
 	private int velocidadMaxima;
 	private boolean motorEncendido;
 	private SistemaSonido sistemaSonido;
 	
 	//Constructor Vacio
-	public Auto() {
-		
-	}
+	
 	
 	//Constructor
 	public Auto(String marca, String modelo, String color, 
-				int velocidadActual, int velocidadMaxima, boolean motorEncendido){{
-					
-		this.marca = marca;
-		this.modelo = modelo;
-		this.color = color;
+				int velocidadActual, int velocidadMaxima, boolean motorEncendido){
+		super(marca,modelo,color, true);
 		this.velocidadActual = velocidadActual;
 		this.velocidadMaxima = velocidadMaxima;
-		this.motorEncendido = motorEncendido; 
-	}
-		
+		this.motorEncendido = motorEncendido;       		
 	}
 	
 
