@@ -1,11 +1,12 @@
 package MainPackage;
 import Modelo.Auto;
+import Modelo.Conductor;
+import Modelo.SistemaSonido;
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+				
 		Auto instanciaAuto = new Auto();
 		
 		//using getter and setter method
@@ -23,6 +24,28 @@ public class MainClass {
 		System.out.println("\nMotor encendido: "+ instanciaAuto.isMotorEncendido());
 		System.out.println("velocidad: "+ instanciaAuto.getVelocidadActual());
 		
+		instanciaAuto.isMotorizado(); //funcion heredada de Vehiculo
+			
+		
+		//Instanciando la clase asociada; SistemaSonido
+		SistemaSonido instanciaSSonido = new SistemaSonido();
+		instanciaSSonido.setVolumenMaximo(500);		
+		instanciaAuto.setSistemaSonido(instanciaSSonido);
+		
+		
+		System.out.println(instanciaAuto.toString());
+		
+		
+		//Instanciando la clase asociada; Conductor
+		Conductor instanciaConductor = new Conductor();
+		instanciaConductor.setNombre("Pistero");
+		instanciaConductor.setSuAuto(instanciaAuto);
+		
+		System.out.println(instanciaConductor.toString());
+		
+		
 	}
+
+	
 
 }
